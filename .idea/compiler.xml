@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Cliente" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="Notificacion" />
+        <module name="Cita" />
+        <module name="Historial" />
+        <module name="Auth" />
+        <module name="Servicio" />
+        <module name="Disponibilidad" />
+        <module name="Factura" />
+        <module name="Vehiculo" />
+        <module name="Cliente" />
+        <module name="Seguimiento" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Auth" options="-parameters" />
+      <module name="Cita" options="-parameters" />
+      <module name="Cliente" options="-parameters" />
+      <module name="Disponibilidad" options="-parameters" />
+      <module name="Factura" options="-parameters" />
+      <module name="Historial" options="-parameters" />
+      <module name="Notificacion" options="-parameters" />
+      <module name="Seguimiento" options="-parameters" />
+      <module name="Servicio" options="-parameters" />
+      <module name="Vehiculo" options="-parameters" />
+    </option>
+  </component>
+</project>
