@@ -1,0 +1,22 @@
+package com.microservicios_taller.Servicio.Servicio.model;
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "servicio")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Servicio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idServicio;
+
+    @Column(nullable = false)
+    private String tipoServicio;
+
+}
