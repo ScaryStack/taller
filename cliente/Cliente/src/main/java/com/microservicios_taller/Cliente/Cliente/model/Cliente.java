@@ -1,6 +1,5 @@
 package com.microservicios_taller.Cliente.Cliente.model;
 
-import com.microservicios_taller.Auth.Auth.model.Auth;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,7 +32,5 @@ public class Cliente {
     @Column(nullable = false)
     private String contrasena;
 
-    @OneToOne(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private Auth auth;
 
 }

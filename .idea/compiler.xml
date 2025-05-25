@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for Cliente" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for Vehiculo" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -14,11 +15,11 @@
         <module name="Historial" />
         <module name="Auth" />
         <module name="Servicio" />
-        <module name="Disponibilidad" />
         <module name="Factura" />
+        <module name="Disponibilidad" />
         <module name="Vehiculo" />
-        <module name="Cliente" />
         <module name="Seguimiento" />
+        <module name="Cliente" />
       </profile>
     </annotationProcessing>
   </component>
