@@ -13,14 +13,4 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Login login) {
-        boolean autenticado = authService.autenticar(login.getUsuario(), login.getContrasena());
-
-        if (autenticado) {
-            return ResponseEntity.ok("Autenticación exitosa");
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales inválidas");
-        }
-    }
 }
