@@ -1,6 +1,6 @@
 package com.microservicios_taller.Factura.Factura.service;
 
-import com.microservicios_taller.Factura.Factura.model.Factura;
+import com.microservicios_taller.Factura.Factura.model.FacturaModel;
 import com.microservicios_taller.Factura.Factura.repository.FacturaRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +15,15 @@ public class FacturaService {
         this.facturaRepository = facturaRepository;
     }
 
-    public Factura crearFactura(Factura factura) {
+    public FacturaModel crearFactura(FacturaModel factura) {
         return facturaRepository.save(factura);
     }
 
-    public Factura obtenerFacturaPorId(Long id) {
+    public FacturaModel obtenerFacturaPorId(Long id) {
         return facturaRepository.findById(id).orElse(null);
     }
 
-    public List<Factura> listarFacturas() {
+    public List<FacturaModel> listarFacturas() {
         return facturaRepository.findAll();
     }
 
@@ -31,7 +31,7 @@ public class FacturaService {
         facturaRepository.deleteById(id);
     }
 
-    public Factura obtenerPorIdCita(Long idCita) {
+    public FacturaModel obtenerPorIdCita(Long idCita) {
         return facturaRepository.findByCita_IdCita(idCita);
     }
 }
