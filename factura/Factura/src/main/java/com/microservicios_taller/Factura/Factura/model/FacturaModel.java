@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Factura {
+public class FacturaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

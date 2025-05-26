@@ -1,6 +1,6 @@
 package com.microservicios_taller.Factura.Factura.controller;
 
-import com.microservicios_taller.Factura.Factura.model.Factura;
+import com.microservicios_taller.Factura.Factura.model.FacturaModel;
 import com.microservicios_taller.Factura.Factura.service.FacturaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,24 +18,24 @@ public class FacturaController {
     }
 
     @PostMapping
-    public ResponseEntity<Factura> crear(@RequestBody Factura factura) {
+    public ResponseEntity<FacturaModel> crear(@RequestBody FacturaModel factura) {
         return ResponseEntity.ok(facturaService.crearFactura(factura));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Factura> obtenerPorId(@PathVariable Long id) {
-        Factura factura = facturaService.obtenerFacturaPorId(id);
+    public ResponseEntity<FacturaModel> obtenerPorId(@PathVariable Long id) {
+        FacturaModel factura = facturaService.obtenerFacturaPorId(id);
         return factura != null ? ResponseEntity.ok(factura) : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/cita/{idCita}")
-    public ResponseEntity<Factura> obtenerPorCita(@PathVariable Long idCita) {
-        Factura factura = facturaService.obtenerPorIdCita(idCita);
+    public ResponseEntity<FacturaModel> obtenerPorCita(@PathVariable Long idCita) {
+        FacturaModel factura = facturaService.obtenerPorIdCita(idCita);
         return factura != null ? ResponseEntity.ok(factura) : ResponseEntity.notFound().build();
     }
 
     @GetMapping
-    public ResponseEntity<List<Factura>> listar() {
+    public ResponseEntity<List<FacturaModel>> listar() {
         return ResponseEntity.ok(facturaService.listarFacturas());
     }
 
