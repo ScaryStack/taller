@@ -3,11 +3,18 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for Vehiculo" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+      </profile>
+      <profile name="Annotation profile for taller-parent" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
         <module name="Notificacion" />
@@ -15,11 +22,10 @@
         <module name="Historial" />
         <module name="Auth" />
         <module name="Servicio" />
-        <module name="Factura" />
         <module name="Disponibilidad" />
-        <module name="Vehiculo" />
-        <module name="Seguimiento" />
+        <module name="Factura" />
         <module name="Cliente" />
+        <module name="Seguimiento" />
       </profile>
     </annotationProcessing>
   </component>
@@ -35,6 +41,7 @@
       <module name="Seguimiento" options="-parameters" />
       <module name="Servicio" options="-parameters" />
       <module name="Vehiculo" options="-parameters" />
+      <module name="common" options="-parameters" />
     </option>
   </component>
 </project>
