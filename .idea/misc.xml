@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/notificacion/Notificacion/pom.xml" />
         <option value="$PROJECT_DIR$/disponibilidad/Disponibilidad/pom.xml" />
         <option value="$PROJECT_DIR$/historial-cita/Historial/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
