@@ -1,5 +1,7 @@
 package com.microservicios_taller.Vehiculo.Vehiculo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,6 +32,15 @@ public class Vehiculo {
 
     @Column(nullable = false)
     private String color;
+
+    @ManyToOne
+    @JoinColumn(name = "idCliente")
+    @JsonBackReference
+    private Cliente cliente;
+
+    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Servicio> servicios;
 
 }
 

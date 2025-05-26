@@ -1,5 +1,6 @@
 package com.microservicios_taller.Disponibilidad.Disponibilidad.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,9 @@ public class Disponibilidad {
 
     @Column(nullable = false)
     private String estado;
+
+    @ManyToOne
+    @JoinColumn(name = "idServicio")
+    @JsonBackReference
+    private Servicio servicio;
 }

@@ -1,5 +1,6 @@
 package com.microservicios_taller.Notificacion.Notificacion.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,10 @@ public class Notificacion {
 
     @Column(nullable = false)
     private String mensaje;
+
+    @ManyToOne
+    @JoinColumn(name = "idCliente")
+    @JsonBackReference
+    private Cliente cliente;
 
 }

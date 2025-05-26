@@ -1,4 +1,4 @@
-package com.microservicios_taller.Auth.Auth.model;
+package com.microservicios_taller.Factura.Factura.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -6,20 +6,26 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "auth")
+@Table(name = "factura")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Auth {
+public class Factura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAuth;
+    private Long idFactura;
+
+    private Double monto;
+    private LocalDate fechaEmision;
+    private String metodoPago;
 
     @OneToOne
-    @MapsId
-    @JoinColumn(name = "idCliente")
+    @JoinColumn(name = "idCita")
     @JsonBackReference
-    private Cliente cliente;
+    private Cita cita;
+
 }
