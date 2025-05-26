@@ -1,5 +1,6 @@
 package com.microservicios_taller.Historial.Historial.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,9 @@ public class HistorialCitas {
 
     @Column(nullable = false)
     private String estado;
+
+    @OneToOne
+    @JoinColumn(name = "idCita")
+    @JsonBackReference
+    private Cita cita;
 }
