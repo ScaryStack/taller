@@ -21,7 +21,7 @@ public class CitaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cita> getCitaById(@PathVariable Long id) {
+    public ResponseEntity<Cita> getCitaById(@PathVariable Integer id) {
         return citaService.getCitaById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -33,7 +33,7 @@ public class CitaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cita> updateCita(@PathVariable Long id, @RequestBody Cita citaDetails) {
+    public ResponseEntity<Cita> updateCita(@PathVariable Integer id, @RequestBody Cita citaDetails) {
         try {
             Cita updatedCita = citaService.updateCita(id, citaDetails);
             return ResponseEntity.ok(updatedCita);
@@ -43,7 +43,7 @@ public class CitaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCita(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCita(@PathVariable Integer id) {
         citaService.deleteCita(id);
         return ResponseEntity.noContent().build();
     }

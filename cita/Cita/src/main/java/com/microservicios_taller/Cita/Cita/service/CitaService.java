@@ -19,7 +19,7 @@ public class CitaService {
         return citaRepository.findAll();
     }
 
-    public Optional<Cita> getCitaById(Long id) {
+    public Optional<Cita> getCitaById(Integer id) {
         return citaRepository.findById(id);
     }
 
@@ -27,11 +27,11 @@ public class CitaService {
         return citaRepository.save(cita);
     }
 
-    public void deleteCita(Long id) {
+    public void deleteCita(Integer id) {
         citaRepository.deleteById(id);
     }
 
-    public Cita updateCita(Long id, Cita citaDetails) {
+    public Cita updateCita(Integer id, Cita citaDetails) {
         return citaRepository.findById(id).map(cita -> {
             cita.setMensajeCita(citaDetails.getMensajeCita());
             return citaRepository.save(cita);
