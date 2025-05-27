@@ -14,13 +14,9 @@ import lombok.NoArgsConstructor;
 public class Disponibilidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idDisponibilidad;
+    private Integer idDisponibilidad;
 
     @Column(nullable = false)
     private String estado;
 
-    @ManyToOne
-    @JoinColumn(name = "idServicio")
-    @JsonBackReference
-    private Servicio servicio;
 }
