@@ -35,9 +35,6 @@ public class ClienteService {
             cliente.setNombres(clienteDetails.getNombres());
             cliente.setApellidos(clienteDetails.getApellidos());
             cliente.setCorreo(clienteDetails.getCorreo());
-            cliente.setUsuario(clienteDetails.getUsuario());
-            cliente.setContrasena(clienteDetails.getContrasena());
-            // No actualizamos auth aquí, depende de otro servicio o método
             return clienteRepository.save(cliente);
         }).orElseThrow(() -> new RuntimeException("Cliente no encontrado con id " + id));
     }
