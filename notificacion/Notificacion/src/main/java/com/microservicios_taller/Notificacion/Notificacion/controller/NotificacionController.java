@@ -14,28 +14,34 @@ import java.util.List;
 public class NotificacionController {
 
     @Autowired
-    private NotificacionService service;
+    private NotificacionService notificacionService;
 
     @GetMapping
     public List<Notificacion> getAll() {
-        return service.findAll();
+        return notificacionService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Notificacion> getById(@PathVariable Long id) {
-        return service.findById(id)
+    public ResponseEntity<Notificacion> getById(@PathVariable Integer id) {
+        return notificacionService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/cliente/{idCliente}")
+    public ResponseEntity<Notificacion> obtenerPorCliente(@PathVariable Integer idCliente) {
+        Notificacion notificacion = notificacionService.findByIdCliente(idCliente);
+        return notificacion != null ? ResponseEntity.ok(notificacion) : ResponseEntity.notFound().build();
+    }
+
     @PostMapping
     public Notificacion create(@RequestBody Notificacion notificacion) {
-        return service.save(notificacion);
+        return notificacionService.save(notificacion);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        service.deleteById(id);
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
+        notificacionService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }

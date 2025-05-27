@@ -13,21 +13,25 @@ import java.util.Optional;
 public class NotificacionService {
 
     @Autowired
-    private NotificacionRepository repository;
+    private NotificacionRepository notificacionRepository;
 
     public List<Notificacion> findAll() {
-        return repository.findAll();
+        return notificacionRepository.findAll();
     }
 
-    public Optional<Notificacion> findById(Long id) {
-        return repository.findById(id);
+    public Optional<Notificacion> findById(Integer id) {
+        return notificacionRepository.findById(id);
     }
 
     public Notificacion save(Notificacion notificacion) {
-        return repository.save(notificacion);
+        return notificacionRepository.save(notificacion);
     }
 
-    public void deleteById(Long id) {
-        repository.deleteById(id);
+    public void deleteById(Integer id) {
+        notificacionRepository.deleteById(id);
+    }
+
+    public Notificacion findByIdCliente(Integer idCliente) {
+        return notificacionRepository.findByIdCliente(idCliente);
     }
 }
