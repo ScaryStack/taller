@@ -1,8 +1,6 @@
 package com.microservicios_taller.Servicio.Servicio.model;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,22 +14,15 @@ import lombok.NoArgsConstructor;
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idServicio;
+    private Integer idServicio;
 
     @Column(nullable = false)
     private String tipoServicio;
 
-    @ManyToOne
-    @JoinColumn(name = "idVehiculo")
-    @JsonBackReference
-    private Vehiculo vehiculo;
+    @Column(nullable = false)
+    private Integer idVehiculo;
 
-    @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Disponibilidad> disponibilidades;
-
-    @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Cita> citas;
+    @Column(nullable = false)
+    private Integer idDisponibilidad;
 
 }
