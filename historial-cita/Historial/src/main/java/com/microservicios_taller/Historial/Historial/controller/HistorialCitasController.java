@@ -14,28 +14,34 @@ import java.util.List;
 public class HistorialCitasController {
 
     @Autowired
-    private HistorialCitasService service;
+    private HistorialCitasService historialCitasService;
 
     @GetMapping
     public List<HistorialCitas> getAll() {
-        return service.findAll();
+        return historialCitasService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<HistorialCitas> getById(@PathVariable Long id) {
-        return service.findById(id)
+    public ResponseEntity<HistorialCitas> getById(@PathVariable Integer id) {
+        return historialCitasService.findById(id)
                 .map(historial -> ResponseEntity.ok(historial))
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/cita/{idCita}")
+    public ResponseEntity<HistorialCitas> obtenerPorCita(@PathVariable Integer idCita) {
+        HistorialCitas historialCitas = historialCitasService.obtenerPorIdCita(idCita);
+        return historialCitas != null ? ResponseEntity.ok(historialCitas) : ResponseEntity.notFound().build();
+    }
+
     @PostMapping
     public HistorialCitas create(@RequestBody HistorialCitas historialCitas) {
-        return service.save(historialCitas);
+        return historialCitasService.save(historialCitas);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        service.deleteById(id);
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
+        historialCitasService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }

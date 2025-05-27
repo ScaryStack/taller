@@ -13,21 +13,25 @@ import java.util.Optional;
 public class HistorialCitasService {
 
     @Autowired
-    private HistorialCitasRepository repository;
+    private HistorialCitasRepository historialCitasRepository;
 
     public List<HistorialCitas> findAll() {
-        return repository.findAll();
+        return historialCitasRepository.findAll();
     }
 
-    public Optional<HistorialCitas> findById(Long id) {
-        return repository.findById(id);
+    public Optional<HistorialCitas> findById(Integer id) {
+        return historialCitasRepository.findById(id);
     }
 
     public HistorialCitas save(HistorialCitas historialCitas) {
-        return repository.save(historialCitas);
+        return historialCitasRepository.save(historialCitas);
     }
 
-    public void deleteById(Long id) {
-        repository.deleteById(id);
+    public void deleteById(Integer id) {
+        historialCitasRepository.deleteById(id);
+    }
+
+    public HistorialCitas obtenerPorIdCita(Integer idCita) {
+        return historialCitasRepository.findByIdCita(idCita);
     }
 }
