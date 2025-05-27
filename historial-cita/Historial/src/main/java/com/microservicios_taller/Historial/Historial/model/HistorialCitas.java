@@ -14,13 +14,11 @@ import lombok.NoArgsConstructor;
 public class HistorialCitas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idHistorial;
+    private Integer idHistorial;
 
     @Column(nullable = false)
-    private String estado;
+    private String descripcion;
 
-    @OneToOne
-    @JoinColumn(name = "idCita")
-    @JsonBackReference
-    private Cita cita;
+    @Column(nullable = false)
+    private Integer idCita;
 }

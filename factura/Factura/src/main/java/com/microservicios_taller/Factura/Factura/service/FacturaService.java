@@ -2,6 +2,7 @@ package com.microservicios_taller.Factura.Factura.service;
 
 import com.microservicios_taller.Factura.Factura.model.Factura;
 import com.microservicios_taller.Factura.Factura.repository.FacturaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,17 +10,14 @@ import java.util.List;
 @Service
 public class FacturaService {
 
-    private final FacturaRepository facturaRepository;
-
-    public FacturaService(FacturaRepository facturaRepository) {
-        this.facturaRepository = facturaRepository;
-    }
+    @Autowired
+    private FacturaRepository facturaRepository;
 
     public Factura crearFactura(Factura factura) {
         return facturaRepository.save(factura);
     }
 
-    public Factura obtenerFacturaPorId(Long id) {
+    public Factura obtenerFacturaPorId(Integer id) {
         return facturaRepository.findById(id).orElse(null);
     }
 
@@ -27,11 +25,11 @@ public class FacturaService {
         return facturaRepository.findAll();
     }
 
-    public void eliminarFactura(Long id) {
+    public void eliminarFactura(Integer id) {
         facturaRepository.deleteById(id);
     }
 
-    public Factura obtenerPorIdCita(Long idCita) {
-        return facturaRepository.findByCita_IdCita(idCita);
+    public Factura obtenerPorIdCita(Integer idCita) {
+        return facturaRepository.findByIdCita(idCita);
     }
 }

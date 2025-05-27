@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v2/disponibilidades")
+@RequestMapping("/api/v2/disponibilidad")
 public class DisponibilidadController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class DisponibilidadController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Disponibilidad> getDisponibilidadById(@PathVariable Long id) {
+    public ResponseEntity<Disponibilidad> getDisponibilidadById(@PathVariable Integer id) {
         return disponibilidadService.getDisponibilidadById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -33,7 +33,7 @@ public class DisponibilidadController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Disponibilidad> updateDisponibilidad(@PathVariable Long id, @RequestBody Disponibilidad disponibilidadDetails) {
+    public ResponseEntity<Disponibilidad> updateDisponibilidad(@PathVariable Integer id, @RequestBody Disponibilidad disponibilidadDetails) {
         try {
             Disponibilidad updatedDisponibilidad = disponibilidadService.updateDisponibilidad(id, disponibilidadDetails);
             return ResponseEntity.ok(updatedDisponibilidad);
@@ -43,7 +43,7 @@ public class DisponibilidadController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteDisponibilidad(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteDisponibilidad(@PathVariable Integer id) {
         disponibilidadService.deleteDisponibilidad(id);
         return ResponseEntity.noContent().build();
     }

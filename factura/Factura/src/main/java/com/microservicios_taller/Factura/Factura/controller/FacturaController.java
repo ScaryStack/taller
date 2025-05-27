@@ -2,6 +2,7 @@ package com.microservicios_taller.Factura.Factura.controller;
 
 import com.microservicios_taller.Factura.Factura.model.Factura;
 import com.microservicios_taller.Factura.Factura.service.FacturaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,8 @@ import java.util.List;
 @RequestMapping("/api/v2/facturas")
 public class FacturaController {
 
-    private final FacturaService facturaService;
-
-    public FacturaController(FacturaService facturaService) {
-        this.facturaService = facturaService;
-    }
+    @Autowired
+    private FacturaService facturaService;
 
     @PostMapping
     public ResponseEntity<Factura> crear(@RequestBody Factura factura) {
@@ -23,13 +21,13 @@ public class FacturaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Factura> obtenerPorId(@PathVariable Long id) {
+    public ResponseEntity<Factura> obtenerPorId(@PathVariable Integer id) {
         Factura factura = facturaService.obtenerFacturaPorId(id);
         return factura != null ? ResponseEntity.ok(factura) : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/cita/{idCita}")
-    public ResponseEntity<Factura> obtenerPorCita(@PathVariable Long idCita) {
+    public ResponseEntity<Factura> obtenerPorCita(@PathVariable Integer idCita) {
         Factura factura = facturaService.obtenerPorIdCita(idCita);
         return factura != null ? ResponseEntity.ok(factura) : ResponseEntity.notFound().build();
     }
@@ -40,7 +38,7 @@ public class FacturaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
         facturaService.eliminarFactura(id);
         return ResponseEntity.noContent().build();
     }

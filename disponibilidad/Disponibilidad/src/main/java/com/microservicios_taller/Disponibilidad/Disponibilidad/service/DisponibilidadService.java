@@ -18,7 +18,7 @@ public class DisponibilidadService {
         return disponibilidadRepository.findAll();
     }
 
-    public Optional<Disponibilidad> getDisponibilidadById(Long id) {
+    public Optional<Disponibilidad> getDisponibilidadById(Integer id) {
         return disponibilidadRepository.findById(id);
     }
 
@@ -26,11 +26,11 @@ public class DisponibilidadService {
         return disponibilidadRepository.save(disponibilidad);
     }
 
-    public void deleteDisponibilidad(Long id) {
+    public void deleteDisponibilidad(Integer id) {
         disponibilidadRepository.deleteById(id);
     }
 
-    public Disponibilidad updateDisponibilidad(Long id, Disponibilidad disponibilidadDetails) {
+    public Disponibilidad updateDisponibilidad(Integer id, Disponibilidad disponibilidadDetails) {
         return disponibilidadRepository.findById(id).map(disponibilidad -> {
             disponibilidad.setEstado(disponibilidadDetails.getEstado());
             return disponibilidadRepository.save(disponibilidad);
