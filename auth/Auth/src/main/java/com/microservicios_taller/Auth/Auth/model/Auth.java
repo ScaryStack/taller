@@ -1,6 +1,5 @@
 package com.microservicios_taller.Auth.Auth.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,11 +14,14 @@ public class Auth {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAuth;
+    private Integer id;
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "idCliente")
-    @JsonBackReference
-    private Cliente cliente;
+    @Column(nullable = false, unique = true)
+    private String usuario;
+
+    @Column(nullable = false)
+    private String contrasena;
+
+    @Column(nullable = false)
+    private Integer idCliente;
 }
