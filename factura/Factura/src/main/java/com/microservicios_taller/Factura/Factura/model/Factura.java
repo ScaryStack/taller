@@ -1,6 +1,5 @@
 package com.microservicios_taller.Factura.Factura.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,19 +12,17 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FacturaModel {
+public class Factura{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idFactura;
+    private Integer idFactura;
 
     private Double monto;
     private LocalDate fechaEmision;
     private String metodoPago;
 
-    @OneToOne
-    @JoinColumn(name = "idCita")
-    @JsonBackReference
-    private Cita cita;
+    @Column(nullable = false)
+    private Integer idCita;
 
 }
