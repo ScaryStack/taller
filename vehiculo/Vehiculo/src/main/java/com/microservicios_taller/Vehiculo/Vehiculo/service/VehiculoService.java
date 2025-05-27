@@ -12,21 +12,35 @@ import java.util.Optional;
 public class VehiculoService {
 
     @Autowired
-    private VehiculoRepository repository;
+    private VehiculoRepository vehiculoRepository;
 
-    public List<Vehiculo> findAll() {
-        return repository.findAll();
+    public List<Vehiculo> obtenerVehiculosPorCliente(Integer idCliente) {
+        return vehiculoRepository.findByIdCliente(idCliente);
     }
 
-    public Optional<Vehiculo> findById(Integer id) {
-        return repository.findById(id);
+    public List<Vehiculo> getAllVehiculos() {
+        return vehiculoRepository.findAll();
     }
 
-    public Vehiculo save(Vehiculo vehiculo) {
-        return repository.save(vehiculo);
+    public Optional<Vehiculo> getVehiculoById(Integer id) {
+        return vehiculoRepository.findById(id);
     }
 
-    public void deleteById(Integer id) {
-        repository.deleteById(id);
+    public Vehiculo saveVehiculo(Vehiculo vehiculo) {
+        return vehiculoRepository.save(vehiculo);
+    }
+
+    public void deleteVehiculo(Integer id) {
+        vehiculoRepository.deleteById(id);
+    }
+
+    public Vehiculo updateVehiculo(Integer id, Vehiculo vehiculoDetails) {
+        return vehiculoRepository.findById(id).map(vehiculo -> {
+            vehiculo.setColor(vehiculoDetails.getColor());
+            vehiculo.setMarca(vehiculoDetails.getMarca());
+            vehiculo.setModelo(vehiculoDetails.getModelo());
+            vehiculo.setPatente(vehiculoDetails.getPatente());
+            return vehiculoRepository.save(vehiculo);
+        }).orElseThrow(() -> new RuntimeException("Vehiculo no encontrado con id " + id));
     }
 }
