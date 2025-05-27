@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "seguimiento")
 @Data
@@ -14,15 +16,14 @@ public class Seguimiento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idSeguimiento;
+    private Integer idSeguimiento;
 
     @Column(nullable = false)
     private String descripcion;
 
     @Column(nullable = false)
-    private java.time.LocalDateTime fecha;
+    private LocalDate fecha;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idCliente", nullable = false)
-    private Cliente cliente;
+    @Column(nullable = false)
+    private Integer idCliente;
 }

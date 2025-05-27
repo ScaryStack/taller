@@ -2,6 +2,7 @@ package com.microservicios_taller.Seguimiento.Seguimiento.controller;
 
 import com.microservicios_taller.Seguimiento.Seguimiento.model.Seguimiento;
 import com.microservicios_taller.Seguimiento.Seguimiento.service.SeguimientoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,8 @@ import java.util.List;
 @RequestMapping("/api/v2/seguimientos")
 public class SeguimientoController {
 
-    private final SeguimientoService seguimientoService;
-
-    public SeguimientoController(SeguimientoService seguimientoService) {
-        this.seguimientoService = seguimientoService;
-    }
+    @Autowired
+    private SeguimientoService seguimientoService;
 
     @PostMapping
     public ResponseEntity<Seguimiento> crear(@RequestBody Seguimiento seguimiento) {
@@ -23,7 +21,7 @@ public class SeguimientoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Seguimiento> obtenerPorId(@PathVariable Long id) {
+    public ResponseEntity<Seguimiento> obtenerPorId(@PathVariable Integer id) {
         Seguimiento seguimiento = seguimientoService.obtenerPorId(id);
         return seguimiento != null ? ResponseEntity.ok(seguimiento) : ResponseEntity.notFound().build();
     }
@@ -39,7 +37,7 @@ public class SeguimientoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
         seguimientoService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
