@@ -1,11 +1,10 @@
 package com.microservicios_taller.Vehiculo.Vehiculo.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @Entity
 @Table(name = "vehiculo")
@@ -13,13 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-
-
 public class Vehiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idVehiculo;
+    private Integer idVehiculo;
 
     @Column(nullable = false)
     private String patente;
@@ -33,14 +30,8 @@ public class Vehiculo {
     @Column(nullable = false)
     private String color;
 
-    @ManyToOne
-    @JoinColumn(name = "idCliente")
-    @JsonBackReference
-    private Cliente cliente;
-
-    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Servicio> servicios;
+    @Column(nullable = false)
+    private Integer idCliente;
 
 }
 
