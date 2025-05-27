@@ -2,6 +2,8 @@ package com.microservicios_taller.Servicio.Servicio.service;
 
 import com.microservicios_taller.Servicio.Servicio.model.Servicio;
 import com.microservicios_taller.Servicio.Servicio.repository.ServicioRepository;
+import com.taller.common.dto.CitaDTO;
+import com.taller.common.dto.VehiculoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,21 +14,30 @@ import java.util.Optional;
 public class ServicioService {
 
     @Autowired
-    private ServicioRepository repository;
+    private ServicioRepository servicioRepository;
 
     public List<Servicio> findAll() {
-        return repository.findAll();
+        return servicioRepository.findAll();
     }
 
-    public Optional<Servicio> findById(Long id) {
-        return repository.findById(id);
+    public Optional<Servicio> findById(Integer id) {
+        return servicioRepository.findById(id);
     }
 
     public Servicio save(Servicio servicio) {
-        return repository.save(servicio);
+        return servicioRepository.save(servicio);
     }
 
-    public void deleteById(Long id) {
-        repository.deleteById(id);
+    public void deleteById(Integer id) {
+        servicioRepository.deleteById(id);
     }
+
+    public Servicio findByIdVehiculo(Integer idVehiculo) {
+        return servicioRepository.findByIdVehiculo(idVehiculo);
+    }
+
+    public Servicio findByIdDisponibilidad(Integer idDisponibilidad) {
+        return servicioRepository.findByIdDisponibilidad(idDisponibilidad);
+    }
+
 }
