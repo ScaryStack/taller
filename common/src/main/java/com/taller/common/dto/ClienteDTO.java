@@ -7,5 +7,4 @@ public class ClienteDTO {
     private String nombres;
     private String apellidos;
     private String correo;
-    private String usuario;
 }
