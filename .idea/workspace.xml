@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95b7d96e-42de-4dc2-9ab9-794d2a7f4bdb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/AuthDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/CitaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/ClienteDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/DisponibilidadDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/FacturaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/HistorialCitasDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/NotificacionDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/SeguimientoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/ServicioDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/taller/common/dto/VehiculoDTO.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="0bb2edc9e445bcc72aeb064cbf7a36e9e4dbb340" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "ScaryStack"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "ScaryStack"
+  }
+}]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="62c90214-b0e2-4cb6-b846-4bb115b3faa2" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ScaryStack/taller.git&quot;,
+    &quot;accountId&quot;: &quot;62c90214-b0e2-4cb6-b846-4bb115b3faa2&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;ScaryStack&quot;,
+    &quot;repository&quot;: &quot;taller&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2xVSrR2H230SiUBck9QQlyzMUKf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AuthApplication.executor": "Run",
+    "git-widget-placeholder": "patricio",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Programas/Frameworks/SpringBoot/taller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programas\Frameworks\SpringBoot\taller\vehiculo\Vehiculo\src\main\java\com\microservicios_taller\Vehiculo\Vehiculo\controller" />
+      <recent name="E:\Programas\Frameworks\SpringBoot\taller\vehiculo\Vehiculo\src\main\java\com\microservicios_taller\Vehiculo\Vehiculo\model" />
+      <recent name="E:\Programas\Frameworks\SpringBoot\taller\vehiculo\Vehiculo\src\main\java\com\microservicios_taller\Vehiculo\Vehiculo\repository" />
+      <recent name="E:\Programas\Frameworks\SpringBoot\taller\vehiculo\Vehiculo\src\main\java\com\microservicios_taller\Vehiculo\Vehiculo\service" />
+      <recent name="E:\Programas\Frameworks\SpringBoot\taller\servicio\Servicio\src\main\java\com\microservicios_taller\Servicio\Servicio\controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Auth.Auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CitaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Cita" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Cita.Cita.CitaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Cliente" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Cliente.Cliente.ClienteApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DisponibilidadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Disponibilidad" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Disponibilidad.Disponibilidad.DisponibilidadApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FacturaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Factura" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Factura.Factura.FacturaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HistorialApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Historial" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Historial.Historial.HistorialApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificacionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Notificacion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Notificacion.Notificacion.NotificacionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeguimientoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Seguimiento" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Seguimiento.Seguimiento.SeguimientoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Servicio" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Servicio.Servicio.ServicioApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Vehiculo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservicios_taller.Vehiculo.Vehiculo.VehiculoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95b7d96e-42de-4dc2-9ab9-794d2a7f4bdb" name="Changes" comment="" />
+      <created>1748021945447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748021945447</updated>
+      <workItem from="1748021946545" duration="6994000" />
+      <workItem from="1748403399057" duration="513000" />
+      <workItem from="1748403953954" duration="428000" />
+    </task>
+    <task id="LOCAL-00001" summary="Estructura básica de microservicios">
+      <option name="closed" value="true" />
+      <created>1748036755619</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748036755619</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Estructura básica de microservicios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estructura básica de microservicios" />
+  </component>
+</project>
